@@ -1,0 +1,29 @@
+.logo {
+  @extend %link;
+
+  @include typography(700, 26px, 1.192, $letter-spacing-main, $font-second);
+  font-family: Raleway, sans-serif;
+  color: $text-header;
+
+  &--navigation {
+    margin-right: 93px;
+    padding: 24px 0px 25px;
+  }
+
+  &--footer {
+    display: block;
+    margin-bottom: 20px;
+  }
+  &--part-one {
+    color: $color-accent;
+  }
+
+  &--part-two {
+    color: $text-on-dark;
+  }
+
+  &--footer {
+    display: block;
+    margin-bottom: 20px;
+  }
+}

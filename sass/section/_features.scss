@@ -1,0 +1,45 @@
+.features {
+  @extend %section;
+}
+
+.features-list {
+  @extend %list;
+  @include flexbox($justify: space-between);
+
+  &__card {
+    width: calc((100% - 30px * 3) / 4);
+    text-align: start;
+  }
+
+  &__label {
+    @extend %nomargin;
+    margin-bottom: 10px;
+
+    @include typography-label;
+    color: $text-header;
+    text-transform: uppercase;
+  }
+
+  &__image {
+    @include flexbox(center, center);
+    margin-bottom: 30px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-align: center;
+
+    background-color: $bgd-second;
+    border-radius: 4px;
+  }
+
+  &__icon {
+    --color2: #2196f3;
+    width: 70px;
+    height: 70px;
+  }
+
+  &__text {
+    @extend %nomargin;
+    @include typography(400, 14px, 1.71);
+    color: $text-main;
+  }
+}

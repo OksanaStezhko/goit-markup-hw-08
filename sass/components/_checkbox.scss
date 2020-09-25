@@ -1,0 +1,33 @@
+.form-checkbox {
+  @include flexbox(center);
+  margin-bottom: 30px;
+  @include typography(400, 14px, 1.71);
+
+  &__label {
+    margin-right: 5px;
+    margin-left: 7px;
+    color: $text-main;
+  }
+
+  &__link {
+    color: $color-accent;
+  }
+
+  &__castom {
+    width: 18px;
+    height: 18px;
+    background-image: url(../images/icon-check.svg);
+    background-size: contain;
+    background-origin: border-box;
+    border: 1px solid $text-header;
+    background-color: $text-on-dark;
+
+    transition: background-color $time $time-function;
+  }
+
+  &__input:checked + &__castom {
+    background-color: $color-accent;
+    border-color: transparent;
+    border-radius: 2px;
+  }
+}

@@ -1,0 +1,27 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $color-section;
+}
+
+.box-contacts {
+  margin-right: 70px;
+  min-width: 231px;
+  text-align: start;
+}
+
+.box-social {
+  &__label {
+    @extend %footer-label;
+  }
+}
+.box-form {
+  margin-left: auto;
+  &__label {
+    @extend %footer-label;
+  }
+}
+
+.container--footer {
+  @include flexbox(baseline);
+}

@@ -1,0 +1,66 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $bgd-backdrop;
+  opacity: 1;
+  overflow: auto;
+  z-index: 1;
+  transition: opacity $time $time-function;
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  padding: 40px;
+  width: 528px;
+  height: 581px;
+  background-color: $text-on-dark;
+  box-shadow: $shadow-modal;
+  border-radius: 4px;
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform $time $time-function $time;
+
+  &__title {
+    @extend %nomargin;
+    margin-bottom: 15px;
+
+    @include typography(700, 20px, 1.15);
+    text-align: center;
+  }
+
+  &__button-close {
+    @include flexbox(center, center);
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 0;
+    margin: 0;
+
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: $text-on-dark;
+    border: 1px solid $color-border-modal;
+    transition: fill $time $time-function, transform $time $time-function;
+  }
+
+  &__button-close:hover {
+    fill: $color-accent;
+    outline-color: $color-border;
+    transform: scale(1.1);
+  }
+
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(0);
+  }
+}

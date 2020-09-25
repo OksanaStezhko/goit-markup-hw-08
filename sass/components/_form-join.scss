@@ -1,0 +1,47 @@
+.form-join {
+  @include flexbox();
+  width: 570px;
+  text-align: start;
+
+  &-input {
+    padding: 15px 16px;
+    margin-right: 12px;
+    width: 358px;
+
+    @include typography(400, 16px, 1.25);
+    color: rgba(255, 255, 255, 0.6);
+
+    background-color: transparent;
+    box-sizing: border-box;
+    filter: drop-shadow($shadow-input-footer);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+  }
+  &-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  &__button {
+    @extend %button;
+    @include flexbox();
+    position: relative;
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  &__button::after {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-28px, -50%);
+
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+
+    background-image: url(../images/icon-send.svg);
+    background-size: contain;
+  }
+}

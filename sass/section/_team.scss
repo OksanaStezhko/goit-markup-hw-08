@@ -1,0 +1,10 @@
+.team {
+  @extend %section;
+  background-color: $bgd-second;
+
+  &__title {
+    @extend %nomargin;
+    @include typography-title();
+    margin-bottom: 50px;
+  }
+}

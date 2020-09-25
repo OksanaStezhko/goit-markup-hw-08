@@ -1,0 +1,40 @@
+.social-network {
+  @extend %list;
+  @include flexbox();
+
+  &__item:not(:nth-child(4)) {
+    margin-right: 10px;
+  }
+  &__icon {
+    width: 20px;
+    height: 20px;
+  }
+  &__link {
+    @extend %link;
+    @include flexbox(center, center);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+  }
+
+  .team &__link {
+    background-color: $bgd-icon-footer;
+    fill: $color-icon;
+    transition: background-color $time $time-function, fill $time $time-function;
+  }
+  .team &__link:hover,
+  .team &__link:focus {
+    background-color: $color-accent;
+    fill: $text-on-dark;
+  }
+
+  .footer &__link {
+    background-color: $bgd-icon-footer;
+    fill: $text-on-dark;
+    transition: background-color $time $time-function;
+  }
+  .footer &__link:hover,
+  .footer &__link:focus {
+    background-color: $color-accent;
+  }
+}

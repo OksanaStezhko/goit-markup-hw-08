@@ -1,0 +1,41 @@
+.members {
+  @extend %list;
+  @include flexbox($wrap: wrap);
+
+  &__card {
+    @include flexbox(center);
+    flex-direction: column;
+    width: calc((100% - 30px * 3) / 4);
+
+    background-color: $text-on-dark;
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: $shadow-card-members;
+  }
+
+  &__card:not(:nth-child(4n)) {
+    margin-right: 30px;
+  }
+
+  &__title {
+    @extend %nomargin;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    @include typography-title;
+  }
+  &__name {
+    @extend %nomargin;
+    margin-bottom: 10px;
+
+    @include typography(500, 16px, 1.19);
+    color: $text-header;
+  }
+
+  &__position {
+    @extend %nomargin;
+    margin-bottom: 10px;
+
+    @include typography(400, 16px, 1.19);
+    color: $text-main;
+  }
+}

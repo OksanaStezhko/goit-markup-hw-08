@@ -1,0 +1,28 @@
+.collection {
+  @extend %list;
+  @include flexbox($wrap: wrap);
+
+  &__item {
+    @include flexbox();
+    width: calc((100% - 30px * 5) / 6);
+  }
+  &__item:not(:nth-child(6n)) {
+    margin-right: 30px;
+  }
+  &__link {
+    @extend %link;
+    @include flexbox(center, center);
+    height: 90px;
+    width: 170px;
+    border: 1px solid $color-icon;
+    border-radius: 4px;
+    fill: $color-icon;
+    transition: border-color $time $time-function, fill $time $time-function;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    fill: $color-accent;
+    border: 1px solid $color-accent;
+  }
+}

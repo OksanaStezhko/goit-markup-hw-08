@@ -1,0 +1,62 @@
+.form-inputs {
+  @extend %list;
+  margin-bottom: 20px;
+  text-align: start;
+
+  &__item {
+    margin-bottom: 10px;
+  }
+
+  &__input {
+    padding: 11px 0px 11px 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: none;
+    transition: border-color $time $time-function;
+  }
+
+  &__input:focus-within {
+    border-color: $color-accent;
+  }
+  &__field {
+    @include flexbox();
+    position: relative;
+    flex-direction: column;
+  }
+
+  &__field:focus-within &__icon {
+    fill: $color-accent;
+  }
+  &__icon {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-left: 12px;
+    transform: translateY(-11px);
+    transition: fill $time $time-function;
+  }
+  &__label {
+    margin-bottom: 4px;
+    @include typography(400, 12px, 1.17, 0.01em);
+  }
+
+  &__comment {
+    resize: none;
+    padding: 12px 16px;
+
+    @include typography(400, 12px, 1.17, 0.01em);
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: none;
+    transition: border-color $time $time-function;
+  }
+
+  &__comment::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
+
+  &__comment:focus-within {
+    border-color: $color-accent;
+  }
+}

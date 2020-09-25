@@ -1,0 +1,20 @@
+.form-modal {
+  display: block;
+  text-align: center;
+
+  &__submit {
+    @extend %button;
+    padding-left: 55px;
+    padding-right: 55px;
+    box-shadow: $shadow-button-modal;
+    transition: backrgound-color $time $time-function;
+  }
+
+  &__submit:hover {
+    background-color: $bgd-hover;
+  }
+
+  &__submit:disabled {
+    background-color: $color-icon;
+  }
+}

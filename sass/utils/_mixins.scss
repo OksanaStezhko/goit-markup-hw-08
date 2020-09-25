@@ -1,0 +1,35 @@
+@mixin flexbox(
+  $align: normal,
+  $justify: normal,
+  $wrap: nowrap,
+  $flex-type: flex
+) {
+  display: $flex-type;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+}
+
+@mixin typography(
+  $font-weight,
+  $font-size,
+  $line-height,
+  $letter-spacing: $letter-spacing-main,
+  $font-family: $font-main
+) {
+  font-family: $font-main;
+  font-style: normal;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+}
+
+@mixin typography-title() {
+  @include typography(700, $size-title, $line-height-title);
+  color: $text-header;
+}
+
+@mixin typography-label {
+  @include typography(700, 14px, 1.14);
+}

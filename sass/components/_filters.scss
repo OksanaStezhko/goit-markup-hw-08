@@ -1,0 +1,35 @@
+.filters {
+  @extend %list;
+  @include flexbox(normal, center, nowrap, inline-flex);
+  margin-bottom: 34px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-bottom: 16px;
+  cursor: pointer;
+
+  &__item:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  &__button {
+    padding: 6px 22px;
+    @include typography(500, 16px, 1.62);
+    color: $text-header;
+    text-align: center;
+
+    background-color: $bgd-second;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    transition: background-color $time $time-function,
+      color $time $time-function;
+  }
+
+  &__button:hover,
+  &__button:focus {
+    color: $text-on-dark;
+    background-color: $color-accent;
+    box-shadow: $shadow-button-filters;
+  }
+}

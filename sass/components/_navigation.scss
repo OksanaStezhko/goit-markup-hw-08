@@ -1,0 +1,42 @@
+.navigation {
+  @extend %nomargin;
+  @include flexbox(center);
+}
+
+.navigation-list {
+  @extend %list;
+  @include flexbox();
+  @include typography(500, 14px, 1.14, 0.02em);
+
+  &__item:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  &__link {
+    @extend %link;
+    padding: 32px 0px;
+    color: $text-header;
+    transition: background-color $time $time-function,
+      color $time $time-function;
+  }
+
+  &__link.current::after {
+    display: block;
+    position: relative;
+    left: 0;
+    top: 31px;
+
+    content: '';
+    width: 100%;
+    height: 4px;
+
+    border-radius: 2px;
+    background-color: $color-accent;
+  }
+
+  &__link.current,
+  &__link:hover,
+  &__link:focus {
+    color: $color-accent;
+  }
+}
