@@ -3,16 +3,41 @@
 .contacts {
   @extend %list;
   @media screen and(max-width: 767px) {
-    // display: none;
     &__item {
       display: block;
     }
     &__item:not(:last-child) {
       margin-bottom: 15px;
     }
+
+    &__link {
+      @include typography(500, 18px, 1.16, 0.02em);
+    }
   }
 
-  //@include flexbox();
+  @media screen and(min-width: 768px) and(max-width: 1199px) {
+    padding-top: 21px;
+    padding-bottom: 21px;
+    &__link {
+      @include flexbox(center, center, nowrap, inline-flex);
+      @include typography(500, 12px, 1.16, 0.02em);
+    }
+    &__link:first-child {
+      margin-bottom: 10px;
+    }
+  }
+
+  @media screen and(min-width: 1200px) {
+    @include flexbox(center, center);
+
+    &__link {
+      @include flexbox(center, center);
+      @include typography(500, 12px, 1.16, 0.02em);
+    }
+    &__link:first-child {
+      margin-right: 30px;
+    }
+  }
   // @include typography(500, 14px, 1.14, 0.02em);
 
   /* Параметры ссылок для обратной связи */
@@ -21,7 +46,7 @@
 
     //@include flexbox(center);
     // padding: 32px 0px;
-    @include typography(500, 18px, 1.16, 0.02em);
+    // @include typography(500, 18px, 1.16, 0.02em);
     color: $text-main;
     transition: background-color $time $time-function,
       color $time $time-function;

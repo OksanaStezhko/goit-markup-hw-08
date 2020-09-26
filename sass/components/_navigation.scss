@@ -1,9 +1,8 @@
 .navigation {
-  display: none;
   @extend %nomargin;
 
-  // @include flexbox(center);
   @media screen and(max-width: 767px) {
+    display: none;
     width: 100%;
     position: absolute;
     top: 100%;
@@ -11,7 +10,43 @@
     padding-top: 60px;
     padding-bottom: 60px;
     text-align: center;
+    border-top: 1px solid $color-line;
     background-color: $bgd-menu;
+    z-index: 1;
+  }
+  @media screen and(min-width: 768px) {
+    @include flexbox(center);
+  }
+}
+
+.navigation-list {
+  @media screen and(max-width: 767px) {
+    width: 100%;
+    margin-bottom: 60px;
+
+    &__item:not(:last-child) {
+      margin-bottom: 40px;
+    }
+    &__link {
+      @include typography(500, 18px, 1.16, 0.02em);
+      color: $text-header;
+    }
+  }
+  @media screen and(min-width: 768px) {
+    @include flexbox(center);
+
+    @include typography(500, 14px, 1.14, 0.02em);
+    color: $text-header;
+
+    &__item:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+  @media screen and(min-width: 768px) and(max-width: 1199px) {
+    margin-right: 84px;
+  }
+  @media screen and(min-width: 1200px) {
+    margin-right: 305px;
   }
 }
 
@@ -21,19 +56,11 @@
 
 .navigation-list {
   @extend %list;
-  width: 100%;
-  margin-bottom: 60px;
-  &__list {
-  }
-
-  &__item:not(:last-child) {
-    margin-bottom: 40px;
-  }
 
   &__link {
     @extend %link;
-    @include typography(500, 18px, 1.16, 0.02em);
-    color: $text-header;
+    // @include typography(500, 18px, 1.16, 0.02em);
+    // color: $text-header;
   }
 
   &__link.current,

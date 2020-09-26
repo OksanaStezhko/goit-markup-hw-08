@@ -2,36 +2,43 @@
   @include flexbox(center, space-between);
   position: relative;
 }
+@media screen and(max-width: 767px) {
+  .menu-button {
+    display: inline-block;
+    margin: 0;
+    margin-left: auto;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    border-image-width: 0px;
+  }
+  .menu-icon {
+    display: block;
+  }
+  .menu-button .icon-menu-close {
+    display: none;
+  }
+  .menu-button.is-open .icon-menu-close {
+    display: block;
+  }
+  .menu-button.is-open .icon-menu {
+    display: none;
+  }
 
-.menu-button {
-  @extend %nomargin;
-  display: inline-block;
-  margin-left: auto;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-  border-image-width: 0px;
-}
-.menu-icon {
-  display: block;
-}
-.menu-button .icon-menu-close {
-  display: none;
-}
-.menu-button.is-open .icon-menu-close {
-  display: block;
-}
-.menu-button.is-open .icon-menu {
-  display: none;
+  .menu-button:focus .icon-menu {
+    fill: $color-accent;
+  }
+  .menu-button:focus .icon-menu-close {
+    fill: $color-accent;
+  }
+
+  .menu-button:focus-within {
+    outline-color: transparent;
+  }
 }
 
-.menu-button:focus .icon-menu {
-  fill: $color-accent;
-}
-.menu-button:focus .icon-menu-close {
-  fill: $color-accent;
-}
-
-.menu-button:focus-within {
-  outline-color: pink;
+@media screen and(min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
 }

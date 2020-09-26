@@ -6,7 +6,9 @@
   color: $text-header;
 
   &--navigation {
-    margin-right: 93px;
+    @media screen and(min-width: 768px) {
+    }
+    //margin-right: 93px;
     // padding: 24px 0px 25px;
     padding-top: 16px;
     padding-bottom: 16px;

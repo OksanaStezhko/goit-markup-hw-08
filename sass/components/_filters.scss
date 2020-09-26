@@ -1,12 +1,20 @@
 .filters {
   @extend %list;
   //@include flexbox(normal, center, nowrap, inline-flex);
-  margin-bottom: 34px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-bottom: 16px;
+  @media screen and(max-width: 767px) {
+    @include flexbox(center, flex-start, wrap);
+    &__item:nth-child(-n + 3) {
+      margin-bottom: 8px;
+    }
+    margin-bottom: 40px;
+  }
+  // margin-bottom: 34px;
+  // margin-right: auto;
+  // margin-left: auto;
+  // padding-bottom: 16px;
   cursor: pointer;
 
+  //Нужно бы убрать марджин у третьего элемента
   &__item:not(:last-child) {
     margin-right: 8px;
   }
