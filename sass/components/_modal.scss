@@ -6,33 +6,36 @@
   height: 100%;
   background-color: $bgd-backdrop;
   opacity: 1;
-  overflow: auto;
+  overflow-y: scroll;
   z-index: 1;
   transition: opacity $time $time-function;
   &.is-hidden {
     opacity: 0;
     pointer-events: none;
   }
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  // position: absolute;
+  position: relative;
+  // top: 50%;
+  // left: 50%;
   padding: 40px;
-  // padding: 40px;
+
   // width: 528px;
   // height: 581px;
   // @media screen and(min-width: 480px) {
-  //   width: 450px;
+  // width: 450px;
   // }
-  width: 450px;
+  //width: 450px;
   background-color: $text-on-dark;
   box-shadow: $shadow-modal;
   border-radius: 4px;
 
-  transform: translate(-50%, -50%) scale(1);
-  transition: transform $time $time-function $time;
+  // transform: translate(-50%, -50%) scale(1);
+  // transition: transform $time $time-function $time;
 
   &__title {
     @extend %nomargin;
