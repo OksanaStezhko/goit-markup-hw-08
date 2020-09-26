@@ -1,19 +1,24 @@
 .features {
-  @extend %section;
+  //@extend %section;
+  padding-top: 60px;
+
+  // @media screen and(min-width: 480px) {
+  //   }
 }
 
 .features-list {
   @extend %list;
-  @include flexbox($justify: space-between);
+  //@include flexbox($justify: space-between);
 
   &__card {
-    width: calc((100% - 30px * 3) / 4);
-    text-align: start;
+    //width: calc((100% - 30px * 3) / 4);
+    display: block;
+    // text-align: start;
   }
 
   &__label {
-    @extend %nomargin;
-    margin-bottom: 10px;
+    // @extend %nomargin;
+    // //margin-bottom: 10px;
 
     @include typography-label;
     color: $text-header;
@@ -21,10 +26,10 @@
   }
 
   &__image {
-    @include flexbox(center, center);
-    margin-bottom: 30px;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    //@include flexbox(center, center);
+    //margin-bottom: 30px;
+    //padding-top: 25px;
+    //padding-bottom: 25px;
     text-align: center;
 
     background-color: $bgd-second;
@@ -38,7 +43,7 @@
   }
 
   &__text {
-    @extend %nomargin;
+    // @extend %nomargin;
     @include typography(400, 14px, 1.71);
     color: $text-main;
   }

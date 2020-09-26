@@ -39,7 +39,7 @@
   }
 
   &__button-close {
-    @include flexbox(center, center);
+    //@include flexbox(center, center);
     position: absolute;
     top: 8px;
     right: 8px;

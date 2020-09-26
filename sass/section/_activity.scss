@@ -1,5 +1,9 @@
 .activity {
-  @extend %section;
+  @media screen and(max-width: 767px) {
+    display: none;
+  }
+
+  // @extend %section;
   padding-top: 0;
 
   &__title {
@@ -11,12 +15,12 @@
 
 .activity-list {
   @extend %list;
-  @include flexbox($wrap: wrap);
+  //@include flexbox($wrap: wrap);
 
   &__card {
     position: relative;
-    @include flexbox(normal, center, wrap, inline-flex);
-    width: calc((100% - 30px * 2) / 3);
+    //@include flexbox(normal, center, wrap, inline-flex);
+    //width: calc((100% - 30px * 2) / 3);
   }
 
   &__card:not(:nth-child(3n)) {

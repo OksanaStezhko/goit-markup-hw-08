@@ -1,6 +1,6 @@
 .filters {
   @extend %list;
-  @include flexbox(normal, center, nowrap, inline-flex);
+  //@include flexbox(normal, center, nowrap, inline-flex);
   margin-bottom: 34px;
   margin-right: auto;
   margin-left: auto;

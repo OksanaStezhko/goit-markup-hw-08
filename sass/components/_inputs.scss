@@ -19,7 +19,7 @@
     border-color: $color-accent;
   }
   &__field {
-    @include flexbox();
+    //@include flexbox();
     position: relative;
     flex-direction: column;
   }

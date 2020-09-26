@@ -1,9 +1,12 @@
 .clients {
   @extend %section;
+  padding-top: 60px;
+  padding-bottom: 60px;
 
   &__title {
     @extend %nomargin;
-    margin-bottom: 50px;
+    // margin-bottom: 50px;
+    margin-bottom: 30px;
     @include typography-title;
   }
 }

@@ -1,26 +1,28 @@
 .members {
   @extend %list;
-  @include flexbox($wrap: wrap);
+  text-align: center;
+  //@include flexbox($wrap: wrap);
 
   &__card {
-    @include flexbox(center);
-    flex-direction: column;
-    width: calc((100% - 30px * 3) / 4);
+    //@include flexbox(center);
+    // flex-direction: column;
+    //width: calc((100% - 30px * 3) / 4);
 
     background-color: $text-on-dark;
     border-radius: 0px 0px 4px 4px;
     box-shadow: $shadow-card-members;
   }
 
-  &__card:not(:nth-child(4n)) {
-    margin-right: 30px;
-  }
+  // &__card:not(:nth-child(4n)) {
+  //   margin-right: 30px;
+  // }
 
   &__title {
     @extend %nomargin;
+    // padding-top: 30px;
+    // padding-bottom: 30px;
     padding-top: 30px;
-    padding-bottom: 30px;
-
+    padding-bottom: 24px;
     @include typography-title;
   }
   &__name {
@@ -33,8 +35,8 @@
 
   &__position {
     @extend %nomargin;
-    margin-bottom: 10px;
-
+    //margin-bottom: 10px;
+    margin-bottom: 16px;
     @include typography(400, 16px, 1.19);
     color: $text-main;
   }

@@ -3,8 +3,8 @@
   border-top: 1px solid $color-line;
 
   &__box {
-    display: inline-block;
-    width: 696px;
+    // display: inline-block;
+    // width: 696px;
   }
 
   &__title {
@@ -28,10 +28,10 @@
   }
 }
 .background {
-  max-width: 1600px;
+  // max-width: 1600px;
   margin: 0px auto;
   padding: 200px 0px;
-  height: 600px;
+  // height: 600px;
   background-image: linear-gradient(to right, $bgd-primary, $bgd-primary),
     url('../images/primary.jpg');
 }

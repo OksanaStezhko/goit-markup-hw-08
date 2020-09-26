@@ -1,11 +1,15 @@
 .navigation {
   @extend %nomargin;
+
   @include flexbox(center);
 }
 
 .navigation-list {
+  @media screen and(max-width: 767px) {
+    display: none;
+  }
   @extend %list;
-  @include flexbox();
+  //@include flexbox();
   @include typography(500, 14px, 1.14, 0.02em);
 
   &__item:not(:last-child) {

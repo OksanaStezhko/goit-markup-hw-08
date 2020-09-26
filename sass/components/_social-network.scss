@@ -1,6 +1,6 @@
 .social-network {
   @extend %list;
-  @include flexbox();
+  @include flexbox(center, center, nowrap, inline-flex);
 
   &__item:not(:nth-child(4)) {
     margin-right: 10px;

@@ -1,10 +1,13 @@
 .team {
   @extend %section;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: $bgd-second;
 
   &__title {
     @extend %nomargin;
     @include typography-title();
-    margin-bottom: 50px;
+    //  margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 }

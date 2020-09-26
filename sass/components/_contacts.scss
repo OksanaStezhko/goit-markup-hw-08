@@ -1,8 +1,11 @@
 /* Общие параметры для двух списков верхней линии */
 
 .contacts {
+  @media screen and(max-width: 767px) {
+    display: none;
+  }
   @extend %list;
-  @include flexbox();
+  //@include flexbox();
   @include typography(500, 14px, 1.14, 0.02em);
 
   &__item:not(:last-child) {
@@ -12,7 +15,7 @@
   /* Параметры ссылок для обратной связи */
   &__link {
     @extend %link;
-    @include flexbox(center);
+    //@include flexbox(center);
     padding: 32px 0px;
 
     color: $text-main;

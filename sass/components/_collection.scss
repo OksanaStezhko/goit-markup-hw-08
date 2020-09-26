@@ -2,18 +2,22 @@
   @extend %list;
   @include flexbox($wrap: wrap);
 
+  margin: -15px;
+
   &__item {
-    @include flexbox();
-    width: calc((100% - 30px * 5) / 6);
+    // @include flexbox();
+    width: calc((100% - 15px * 4) / 2);
+    margin: 15px;
   }
-  &__item:not(:nth-child(6n)) {
-    margin-right: 30px;
-  }
+  // &__item:not(:nth-child(6n)) {
+  //   // margin-right: 30px;
+  // }
+
   &__link {
     @extend %link;
     @include flexbox(center, center);
     height: 90px;
-    width: 170px;
+    // width: 170px;
     border: 1px solid $color-icon;
     border-radius: 4px;
     fill: $color-icon;

@@ -1,6 +1,6 @@
 .projects {
   @extend %list;
-  @include flexbox($wrap: wrap);
+  //@include flexbox($wrap: wrap);
 
   &__card:not(:nth-child(3n)) {
     margin-right: 30px;
@@ -11,7 +11,7 @@
   }
 
   &__card {
-    width: calc((100% - 2 * 30px) / 3);
+    //width: calc((100% - 2 * 30px) / 3);
   }
 
   &__link {
@@ -21,7 +21,7 @@
   }
 
   &__image {
-    @include flexbox($justify: center);
+    //@include flexbox($justify: center);
     position: relative;
     overflow: hidden;
   }
