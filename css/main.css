@@ -48,13 +48,13 @@
   margin: 0px;
 }
 
-.navigation-list.mobile, .contacts, .features-list, .activity-list, .members, .social-network, .collection, .filters, .projects, .form-inputs {
+.navigation-list, .contacts, .features-list, .activity-list, .members, .social-network, .collection, .filters, .projects, .form-inputs {
   list-style: none;
   padding: 0px;
   margin: 0px;
 }
 
-.logo, .contacts__link, .social-network__link, .collection__link, .address__email, .address__tel, .projects__link {
+.logo, .navigation-list__link, .contacts__link, .social-network__link, .collection__link, .address__email, .address__tel, .projects__link {
   text-decoration: none;
   margin: 0px;
 }
@@ -182,10 +182,10 @@ img {
           align-items: center;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+  position: relative;
 }
 
 .navigation {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -224,22 +224,33 @@ img {
   fill: #2196f3;
 }
 
-.navigation-list.mobile {
+.navigation-list {
   position: absolute;
   top: 100%;
   left: 0;
   width: 100%;
+  text-align: center;
   padding-top: 60px;
   padding-bottom: 60px;
+  background-color: #ffffff;
 }
 
-.navigation-list.mobile__list {
+.navigation-list__item:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.navigation-list__link {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.16;
   letter-spacing: 0.02em;
+  color: #212121;
+}
+
+.navigation-list__link.current, .navigation-list__link:hover, .navigation-list__link:focus {
+  color: #2196f3;
 }
 
 /* Общие параметры для двух списков верхней линии */

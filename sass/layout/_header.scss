@@ -1,3 +1,4 @@
 .container--topline {
   @include flexbox(center, space-between);
+  position: relative;
 }

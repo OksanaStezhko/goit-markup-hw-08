@@ -1,5 +1,4 @@
 .navigation {
-  position: relative;
   @extend %nomargin;
 
   @include flexbox(center);
@@ -70,17 +69,33 @@
   fill: $color-accent;
 }
 
-.navigation-list.mobile {
+.navigation-list {
   position: absolute;
   top: 100%;
   left: 0;
   width: 100%;
-
+  text-align: center;
   @extend %list;
   padding-top: 60px;
   padding-bottom: 60px;
+  background-color: $bgd-menu;
 
   &__list {
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  &__link {
+    @extend %link;
     @include typography(500, 18px, 1.16, 0.02em);
+    color: $text-header;
+  }
+
+  &__link.current,
+  &__link:hover,
+  &__link:focus {
+    color: $color-accent;
   }
 }
