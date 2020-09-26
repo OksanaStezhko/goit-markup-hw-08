@@ -1,13 +1,17 @@
 .form-join {
   //@include flexbox();
-  width: 570px;
-  text-align: start;
+  //width: 570px;
+
+  // text-align: start;
 
   &-input {
-    padding: 15px 16px;
-    margin-right: 12px;
-    width: 358px;
-
+    // margin-right: 12px;
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    // width: 358px;
+    width: 100%;
     @include typography(400, 16px, 1.25);
     color: rgba(255, 255, 255, 0.6);
 
@@ -24,10 +28,12 @@
 
   &__button {
     @extend %button;
-    //@include flexbox();
+    @include flexbox();
     position: relative;
     padding-left: 28px;
     padding-right: 28px;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   &__button::after {

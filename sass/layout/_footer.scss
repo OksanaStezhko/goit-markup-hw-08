@@ -6,25 +6,34 @@
 }
 
 .box-contacts {
-  margin-right: 70px;
-  min-width: 231px;
-  text-align: start;
+  //margin-right: 70px;
+  // min-width: 231px;
+  margin-bottom: 60px;
+
+  //text-align: start;
+  text-align: center;
 }
 
 .box-social {
+  margin-bottom: 60px;
+  text-align: center;
   &__label {
+    text-align: center;
     @extend %footer-label;
   }
 }
 .box-form {
-  margin-left: auto;
+  // margin-left: auto;
+
   &__label {
     @extend %footer-label;
+    margin-bottom: 20px;
+    text-align: center;
   }
 }
 
 .container--footer {
   //@include flexbox(baseline);
-  @include flexbox(center, center);
-  flex-direction: column;
+  // @include flexbox(center, center);
+  // flex-direction: column;
 }

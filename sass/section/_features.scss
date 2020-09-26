@@ -28,8 +28,8 @@
   &__image {
     //@include flexbox(center, center);
     //margin-bottom: 30px;
-    //padding-top: 25px;
-    //padding-bottom: 25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     text-align: center;
 
     background-color: $bgd-second;

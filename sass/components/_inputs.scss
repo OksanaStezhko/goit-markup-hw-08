@@ -1,14 +1,16 @@
 .form-inputs {
   @extend %list;
   margin-bottom: 20px;
+
   text-align: start;
 
   &__item {
+    display: block;
     margin-bottom: 10px;
   }
 
   &__input {
-    padding: 11px 0px 11px 40px;
+    padding: 11px 0px 11px 42px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     outline: none;
@@ -19,7 +21,7 @@
     border-color: $color-accent;
   }
   &__field {
-    //@include flexbox();
+    @include flexbox();
     position: relative;
     flex-direction: column;
   }
@@ -39,6 +41,7 @@
   &__label {
     margin-bottom: 4px;
     @include typography(400, 12px, 1.17, 0.01em);
+    color: $text-main;
   }
 
   &__comment {
@@ -53,6 +56,7 @@
   }
 
   &__comment::placeholder {
+    @include typography(400, 14px, 1.71);
     color: rgba(117, 117, 117, 0.5);
   }
 

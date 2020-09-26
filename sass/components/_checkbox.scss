@@ -1,11 +1,14 @@
 .form-checkbox {
-  //@include flexbox(center);
+  display: block;
+  @include flexbox(center);
   margin-bottom: 30px;
-  @include typography(400, 14px, 1.71);
+  // @include typography(400, 14px, 1.71);
+  @include typography(400, 12px, 1.16);
 
   &__label {
     margin-right: 5px;
     margin-left: 7px;
+
     color: $text-main;
   }
 
@@ -14,20 +17,21 @@
   }
 
   &__castom {
-    width: 18px;
-    height: 18px;
-    background-image: url(../images/icon-check.svg);
+    // width: 18px;
+    // height: 18px;
+    width: 16px;
+    height: 15px;
+    background-image: url(../images/icon-check-border.svg);
     background-size: contain;
     background-origin: border-box;
-    border: 1px solid $text-header;
     background-color: $text-on-dark;
 
     transition: background-color $time $time-function;
   }
 
   &__input:checked + &__castom {
+    background-image: url(../images/icon-check.svg);
     background-color: $color-accent;
-    border-color: transparent;
     border-radius: 2px;
   }
 }

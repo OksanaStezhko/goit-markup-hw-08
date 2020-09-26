@@ -22,7 +22,22 @@
           <a href="" class="logo logo--navigation">
             <span class="logo--part-one">Web</span>Studio
           </a>
-          <ul class="navigation-list">
+          <button type="button" class="menu-button" data-menu-button>
+            <svg
+              class="menu-icon"
+              width="40"
+              height="40"
+              aria-label="Переключатель мобильного меню"
+              aria-expanded="false"
+            >
+              <use
+                class="icon-menu-close"
+                href="./images/sprite.svg#icon-menu-close"
+              ></use>
+              <use class="icon-menu" href="./images/sprite.svg#icon-menu"></use>
+            </svg>
+          </button>
+          <ul class="navigation-list mobile">
             <li class="navigation-list__item">
               <a href="./index.html" class="navigation-list__link current">
                 Студия
@@ -539,5 +554,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobil-menu.js"></script>
   </body>
 </html>
