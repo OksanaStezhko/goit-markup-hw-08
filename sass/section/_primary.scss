@@ -23,12 +23,6 @@
   &__button:focus {
     background-color: $bgd-hover;
   }
-  @media screen and(max-width: 767px) {
-  }
-
-  @media screen and(min-width:768px) {
-    border-top: 1px solid $color-line;
-  }
 
   @media screen and(max-width: 1199px) {
     &__title {
@@ -43,7 +37,6 @@
     &__title {
       @include typography(900, 44px, 1.36, 0.06em);
     }
-
     &__box {
       max-width: 696px;
     }

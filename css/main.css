@@ -180,6 +180,13 @@ body.modal-open {
   }
 }
 
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .logo {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+}
+
 .container--topline {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -223,7 +230,7 @@ body.modal-open {
   .menu-button:focus .icon-menu-close {
     fill: #2196f3;
   }
-  .menu-button:focus-within {
+  .menu-button:focus {
     outline-color: transparent;
   }
 }
@@ -231,6 +238,9 @@ body.modal-open {
 @media screen and (min-width: 768px) {
   .menu-button {
     display: none;
+  }
+  .header {
+    border-bottom: 1px solid #ececec;
   }
 }
 
@@ -283,6 +293,16 @@ body.modal-open {
   color: #2196f3;
 }
 
+.navigation-list__link.current::after {
+  display: block;
+  position: relative;
+  content: '';
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #2196f3;
+}
+
 @media screen and (max-width: 767px) {
   .navigation-list {
     width: 100%;
@@ -292,12 +312,17 @@ body.modal-open {
     margin-bottom: 40px;
   }
   .navigation-list__link {
+    display: inline-block;
     font-family: "Roboto", sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
     line-height: 1.16;
     letter-spacing: 0.02em;
+  }
+  .navigation-list__link.current::after {
+    left: 0;
+    top: 8px;
   }
 }
 
@@ -323,6 +348,10 @@ body.modal-open {
   }
   .navigation-list__item:not(:last-child) {
     margin-right: 50px;
+  }
+  .navigation-list__link.current::after {
+    left: 0;
+    top: 31px;
   }
 }
 
@@ -360,7 +389,7 @@ body.modal-open {
     display: block;
   }
   .contacts__item:not(:last-child) {
-    margin-bottom: 15px;
+    margin-bottom: 16px;
   }
   .contacts__link {
     font-family: "Roboto", sans-serif;
@@ -384,11 +413,26 @@ body.modal-open {
   .contacts {
     padding-top: 21px;
     padding-bottom: 21px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .contacts__link {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -485,12 +529,6 @@ body.modal-open {
 
 .primary__button:hover, .primary__button:focus {
   background-color: #188ce8;
-}
-
-@media screen and (min-width: 768px) {
-  .primary {
-    border-top: 1px solid #ececec;
-  }
 }
 
 @media screen and (max-width: 1199px) {
@@ -1011,6 +1049,7 @@ body.modal-open {
 
 .box-form__label {
   margin-bottom: 20px;
+  text-align: center;
 }
 
 @media screen and (max-width: 1199px) {
@@ -1456,6 +1495,22 @@ body.modal-open {
   pointer-events: none;
 }
 
+@media screen and (max-width: 767px) {
+  .backdrop {
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 93px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .backdrop {
+    padding-right: 159px;
+    padding-left: 159px;
+    padding-top: 208px;
+  }
+}
+
 .modal {
   padding: 40px;
   background-color: #ffffff;
@@ -1519,25 +1574,11 @@ body.modal-open {
   .modal {
     position: relative;
   }
-  .modal .backdrop {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 450px;
-    height: 609px;
-    -webkit-transform: translate(-50%, -45%) scale(1);
-            transform: translate(-50%, -45%) scale(1);
-    -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
-    transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms, -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+    position: relative;
   }
 }
 

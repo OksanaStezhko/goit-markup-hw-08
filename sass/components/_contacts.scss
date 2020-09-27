@@ -33,7 +33,7 @@
       display: block;
     }
     &__item:not(:last-child) {
-      margin-bottom: 15px;
+      margin-bottom: 16px;
     }
 
     &__link {
@@ -54,8 +54,11 @@
   @media screen and(min-width: 768px) and(max-width: 1199px) {
     padding-top: 21px;
     padding-bottom: 21px;
+    @include flexbox(flex-start, center);
+    flex-direction: column;
+
     &__link {
-      @include flexbox(center, center, nowrap, inline-flex);
+      @include flexbox(center, center);
       @include typography(500, 12px, 1.16, 0.02em);
     }
     &__item:first-child {

@@ -32,7 +32,7 @@
     fill: $color-accent;
   }
 
-  .menu-button:focus-within {
+  .menu-button:focus {
     outline-color: transparent;
   }
 }
@@ -40,5 +40,9 @@
 @media screen and(min-width: 768px) {
   .menu-button {
     display: none;
+  }
+
+  .header {
+    border-bottom: 1px solid $color-line;
   }
 }
