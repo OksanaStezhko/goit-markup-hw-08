@@ -50,18 +50,16 @@
       @include typography(500, 18px, 1.16, 0.02em);
     }
   }
+
   @media screen and(min-width: 768px) {
     @include flexbox(center);
-
     @include typography(500, 14px, 1.14, 0.02em);
 
     &__item:not(:last-child) {
       margin-right: 50px;
     }
   }
-  @media screen and(min-width: 768px) and(max-width: 1199px) {
-    //margin-right: 84px;
-  }
+
   @media screen and(min-width: 1200px) {
     margin-right: 305px;
   }

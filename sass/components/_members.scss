@@ -1,6 +1,5 @@
 .members {
   @extend %list;
-
   text-align: center;
 
   &__title {
@@ -11,13 +10,9 @@
     background-color: $text-on-dark;
     border-radius: 0px 0px 4px 4px;
     box-shadow: $shadow-card-members;
-
-    @media screen and(max-width: 1200px) {
-      padding-bottom: 24px;
-    }
-
     @include typography-title;
   }
+
   &__name {
     @extend %nomargin;
     margin-bottom: 10px;
@@ -29,6 +24,7 @@
   &__position {
     @extend %nomargin;
     margin-bottom: 16px;
+
     @include typography(400, 16px, 1.19);
     color: $text-main;
   }
@@ -56,6 +52,12 @@
     }
     &__card:not(:nth-child(4n)) {
       margin-right: 30px;
+    }
+  }
+
+  @media screen and(max-width: 1200px) {
+    &__title {
+      padding-bottom: 24px;
     }
   }
 }

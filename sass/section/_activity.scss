@@ -1,8 +1,4 @@
 .activity {
-  @media screen and(max-width: 1199px) {
-    display: none;
-  }
-
   @extend %section;
   padding-top: 0;
 
@@ -10,6 +6,10 @@
     @extend %nomargin;
     margin-bottom: 50px;
     @include typography-title;
+  }
+
+  @media screen and(max-width: 1199px) {
+    display: none;
   }
 }
 

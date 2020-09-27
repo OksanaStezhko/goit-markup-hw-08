@@ -1,7 +1,6 @@
 .form-inputs {
   @extend %list;
   margin-bottom: 20px;
-
   text-align: start;
 
   &__item {
@@ -15,6 +14,7 @@
     border-radius: 4px;
     outline: none;
     transition: border-color $time $time-function;
+    @include typography(400, 14px, 1.17, 0.01em);
   }
 
   &__input:focus-within {

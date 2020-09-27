@@ -2,6 +2,32 @@
 
 .contacts {
   @extend %list;
+
+  &__link {
+    @extend %nomargin;
+    @extend %link;
+
+    color: $text-main;
+    transition: background-color $time $time-function,
+      color $time $time-function;
+  }
+
+  &__icon {
+    margin-right: 10px;
+    fill: $text-main;
+    transition: fill $time $time-function;
+  }
+
+  &__link:hover &__icon,
+  &__link:focus &__icon {
+    fill: $color-accent;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $color-accent;
+  }
+
   @media screen and(max-width: 767px) {
     &__item {
       display: block;
@@ -32,18 +58,19 @@
       @include flexbox(center, center, nowrap, inline-flex);
       @include typography(500, 12px, 1.16, 0.02em);
     }
-    &__link:first-child {
+    &__item:first-child {
       margin-bottom: 10px;
     }
     &__item {
       display: block;
     }
-
+    &__icon {
+      margin-right: 8px;
+    }
     &__icon--envelope {
       width: 14px;
       height: 10px;
     }
-
     &__icon--smartphone {
       width: 10px;
       height: 14px;
@@ -57,42 +84,8 @@
       @include flexbox(center, center);
       @include typography(500, 12px, 1.16, 0.02em);
     }
-    &__link:first-child {
+    &__item:first-child {
       margin-right: 30px;
     }
-  }
-  // @include typography(500, 14px, 1.14, 0.02em);
-
-  /* Параметры ссылок для обратной связи */
-  &__link {
-    @extend %link;
-
-    //@include flexbox(center);
-    // padding: 32px 0px;
-    // @include typography(500, 18px, 1.16, 0.02em);
-    color: $text-main;
-    transition: background-color $time $time-function,
-      color $time $time-function;
-  }
-
-  &__icon {
-    @media screen and(min-width: 768px) and(max-width:1199px) {
-      margin-right: 8px;
-    }
-    margin-right: 10px;
-    fill: $text-main;
-    transition: fill $time $time-function;
-  }
-
-  &__link:hover &__icon,
-  &__link:focus &__icon {
-    fill: $color-accent;
-  }
-
-  /*  hover и focus для ссылок навигации по сайту*/
-
-  &__link:hover,
-  &__link:focus {
-    color: $color-accent;
   }
 }

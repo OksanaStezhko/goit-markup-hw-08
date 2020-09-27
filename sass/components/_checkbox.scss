@@ -1,12 +1,9 @@
 .form-checkbox {
   display: block;
-  @include flexbox(flex-start, center);
+  @include flexbox(center, center);
   margin-bottom: 30px;
-  // @include typography(400, 14px, 1.71);
-  @include typography(400, 12px, 1.16);
 
   &__label {
-    // margin-right: 5px;
     margin-left: 7px;
 
     color: $text-main;
@@ -17,8 +14,6 @@
   }
 
   &__castom {
-    // width: 18px;
-    // height: 18px;
     width: 16px;
     height: 15px;
     background-image: url(../images/icon-check-border.svg);
@@ -35,5 +30,24 @@
     background-repeat: no-repeat;
     background-color: $color-accent;
     border-radius: 2px;
+  }
+
+  @media screen and(max-width:479px) {
+    @include flexbox(flex-start, center);
+  }
+
+  @media screen and(min-width:480px) {
+    @include flexbox(center, center);
+  }
+
+  @media screen and(max-width: 1199px) {
+    @include typography(400, 12px, 1.16);
+  }
+
+  @media screen and(min-width:1200px) {
+    @include typography(400, 14px, 1.71);
+    &__label {
+      margin-left: 8px;
+    }
   }
 }

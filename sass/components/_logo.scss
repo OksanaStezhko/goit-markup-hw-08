@@ -6,11 +6,6 @@
   color: $text-header;
 
   &--navigation {
-    @media screen and(min-width: 768px) {
-      margin-right: 88px;
-    }
-    //margin-right: 93px;
-    // padding: 24px 0px 25px;
     padding-top: 16px;
     padding-bottom: 16px;
   }
@@ -30,5 +25,11 @@
   &--footer {
     display: block;
     margin-bottom: 20px;
+  }
+
+  @media screen and(min-width: 768px) {
+    &--navigation {
+      margin-right: 88px;
+    }
   }
 }
