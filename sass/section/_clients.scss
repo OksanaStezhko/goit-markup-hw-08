@@ -5,8 +5,11 @@
 
   &__title {
     @extend %nomargin;
-    // margin-bottom: 50px;
     margin-bottom: 30px;
     @include typography-title;
+
+    @media screen and(min-width:1200px) {
+      margin-bottom: 50px;
+    }
   }
 }

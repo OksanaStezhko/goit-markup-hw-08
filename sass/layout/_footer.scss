@@ -4,18 +4,11 @@
 
   background-color: $color-section;
 }
-
 .box-contacts {
-  //margin-right: 70px;
-  // min-width: 231px;
-  margin-bottom: 60px;
-
-  //text-align: start;
   text-align: center;
 }
 
 .box-social {
-  margin-bottom: 60px;
   text-align: center;
   &__label {
     text-align: center;
@@ -23,17 +16,62 @@
   }
 }
 .box-form {
-  // margin-left: auto;
-
   &__label {
     @extend %footer-label;
     margin-bottom: 20px;
-    text-align: center;
   }
 }
 
-.container--footer {
-  //@include flexbox(baseline);
-  // @include flexbox(center, center);
-  // flex-direction: column;
+@media screen and(max-width:1199px) {
+  .box-contacts {
+    margin-bottom: 60px;
+  }
+}
+@media screen and(max-width:767px) {
+  .box-social {
+    margin-bottom: 60px;
+  }
+}
+@media screen and(min-width:768px) {
+  .box-contacts {
+    min-width: 232px;
+  }
+}
+
+@media screen and(min-width:768px) and(max-width:1199px) {
+  .container--footer {
+    @include flexbox(flex-start, space-around, wrap);
+  }
+
+  .box-social {
+    padding-top: 5px;
+    min-width: 206px;
+  }
+  .box-form {
+    min-width: 450px;
+    &__label {
+      text-align: center;
+    }
+  }
+}
+
+@media screen and(min-width:1200px) {
+  .container--footer {
+    @include flexbox(baseline);
+  }
+  .box-contacts {
+    margin-right: 70px;
+    text-align: start;
+  }
+  .box-social {
+    &__label {
+      text-align: start;
+    }
+  }
+  .box-form {
+    margin-left: 93px;
+    &__label {
+      text-align: start;
+    }
+  }
 }

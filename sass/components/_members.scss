@@ -1,28 +1,21 @@
 .members {
   @extend %list;
-  text-align: center;
-  //@include flexbox($wrap: wrap);
 
-  &__card {
-    //@include flexbox(center);
-    // flex-direction: column;
-    //width: calc((100% - 30px * 3) / 4);
+  text-align: center;
+
+  &__title {
+    @extend %nomargin;
+    padding-top: 30px;
+    padding-bottom: 30px;
 
     background-color: $text-on-dark;
     border-radius: 0px 0px 4px 4px;
     box-shadow: $shadow-card-members;
-  }
 
-  // &__card:not(:nth-child(4n)) {
-  //   margin-right: 30px;
-  // }
+    @media screen and(max-width: 1200px) {
+      padding-bottom: 24px;
+    }
 
-  &__title {
-    @extend %nomargin;
-    // padding-top: 30px;
-    // padding-bottom: 30px;
-    padding-top: 30px;
-    padding-bottom: 24px;
     @include typography-title;
   }
   &__name {
@@ -35,9 +28,34 @@
 
   &__position {
     @extend %nomargin;
-    //margin-bottom: 10px;
     margin-bottom: 16px;
     @include typography(400, 16px, 1.19);
     color: $text-main;
+  }
+
+  @media screen and(min-width:768px) {
+    @include flexbox($wrap: wrap);
+  }
+
+  @media screen and(min-width:768px) and(max-width:1199px) {
+    &__card {
+      width: calc((100% - 30px * 1) / 2);
+    }
+    &__card:not(:nth-child(2n)) {
+      margin-right: 30px;
+    }
+
+    &__card:not(:nth-last-child(-n + 2)) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and(min-width:1200px) {
+    &__card {
+      width: calc((100% - 30px * 3) / 4);
+    }
+    &__card:not(:nth-child(4n)) {
+      margin-right: 30px;
+    }
   }
 }

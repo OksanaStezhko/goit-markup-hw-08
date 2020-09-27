@@ -15,11 +15,30 @@
     z-index: 1;
   }
   @media screen and(min-width: 768px) {
-    @include flexbox(center);
+    @include flexbox(center, space-between);
+    flex-grow: 1;
+  }
+}
+.navigation.is-open {
+  @media screen and(max-width: 767px) {
+    display: block;
   }
 }
 
 .navigation-list {
+  @extend %list;
+
+  &__link {
+    @extend %link;
+    color: $text-header;
+  }
+
+  &__link.current,
+  &__link:hover,
+  &__link:focus {
+    color: $color-accent;
+  }
+
   @media screen and(max-width: 767px) {
     width: 100%;
     margin-bottom: 60px;
@@ -29,84 +48,21 @@
     }
     &__link {
       @include typography(500, 18px, 1.16, 0.02em);
-      color: $text-header;
     }
   }
   @media screen and(min-width: 768px) {
     @include flexbox(center);
 
     @include typography(500, 14px, 1.14, 0.02em);
-    color: $text-header;
 
     &__item:not(:last-child) {
       margin-right: 50px;
     }
   }
   @media screen and(min-width: 768px) and(max-width: 1199px) {
-    margin-right: 84px;
+    //margin-right: 84px;
   }
   @media screen and(min-width: 1200px) {
     margin-right: 305px;
   }
 }
-
-.navigation.is-open {
-  display: block;
-}
-
-.navigation-list {
-  @extend %list;
-
-  &__link {
-    @extend %link;
-    // @include typography(500, 18px, 1.16, 0.02em);
-    // color: $text-header;
-  }
-
-  &__link.current,
-  &__link:hover,
-  &__link:focus {
-    color: $color-accent;
-  }
-}
-
-// .navigation-list {
-//   @media screen and(max-width: 767px) {
-//     display: none;
-//   }
-//   @extend %list;
-//   //@include flexbox();
-//   @include typography(500, 14px, 1.14, 0.02em);
-
-//   &__item:not(:last-child) {
-//     margin-right: 50px;
-//   }
-
-//   &__link {
-//     @extend %link;
-//     padding: 32px 0px;
-//     color: $text-header;
-//     transition: background-color $time $time-function,
-//       color $time $time-function;
-//   }
-
-//   &__link.current::after {
-//     display: block;
-//     position: relative;
-//     left: 0;
-//     top: 31px;
-
-//     content: '';
-//     width: 100%;
-//     height: 4px;
-
-//     border-radius: 2px;
-//     background-color: $color-accent;
-//   }
-
-//   &__link.current,
-//   &__link:hover,
-//   &__link:focus {
-//     color: $color-accent;
-//   }
-// }

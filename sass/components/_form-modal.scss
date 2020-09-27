@@ -4,8 +4,6 @@
 
   &__submit {
     @extend %button;
-    // padding-left: 55px;
-    // padding-right: 55px;
 
     box-shadow: $shadow-button-modal;
     transition: backrgound-color $time $time-function;
@@ -17,5 +15,12 @@
 
   &__submit:disabled {
     background-color: $color-icon;
+  }
+  @media screen and(min-width:768px) and(max-width:1199px) {
+  }
+
+  @media screen and(min-width:1200px) {
+    padding-left: 55px;
+    padding-right: 55px;
   }
 }

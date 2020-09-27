@@ -1,24 +1,48 @@
 .features {
-  //@extend %section;
   padding-top: 60px;
-
-  // @media screen and(min-width: 480px) {
-  //   }
+  padding-bottom: 60px;
+  @media screen and(min-width:1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .features-list {
   @extend %list;
-  //@include flexbox($justify: space-between);
+  @media screen and(min-width:768px) and(max-width:1199px) {
+    @include flexbox($wrap: wrap);
+    &__card {
+      width: calc((100% - 30px * 1) / 2);
+    }
+    &__card:not(:nth-child(2n)) {
+      margin-right: 30px;
+    }
+    &__card:not(:nth-last-child(-n + 2)) {
+      margin-bottom: 30px;
+    }
+  }
 
+  @media screen and(min-width:1200px) {
+    @include flexbox($wrap: wrap);
+    &__card {
+      width: calc((100% - 30px * 3) / 4);
+    }
+    &__card:not(:nth-child(4n)) {
+      margin-right: 30px;
+    }
+    &__card:not(:nth-last-child(-n + 4)) {
+      margin-bottom: 30px;
+    }
+  }
   &__card {
-    //width: calc((100% - 30px * 3) / 4);
-    display: block;
-    // text-align: start;
+    @media screen and(max-width:767px) {
+      display: block;
+    }
   }
 
   &__label {
-    // @extend %nomargin;
-    // //margin-bottom: 10px;
+    @extend %nomargin;
+    margin-bottom: 10px;
 
     @include typography-label;
     color: $text-header;
@@ -26,11 +50,11 @@
   }
 
   &__image {
-    //@include flexbox(center, center);
-    //margin-bottom: 30px;
+    @include flexbox(center, center);
+
     padding-top: 25px;
     padding-bottom: 25px;
-    text-align: center;
+    margin-bottom: 30px;
 
     background-color: $bgd-second;
     border-radius: 4px;
@@ -43,7 +67,7 @@
   }
 
   &__text {
-    // @extend %nomargin;
+    @extend %nomargin;
     @include typography(400, 14px, 1.71);
     color: $text-main;
   }
