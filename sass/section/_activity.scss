@@ -7,9 +7,9 @@
     margin-bottom: 50px;
     @include typography-title;
   }
-
-  @media screen and(max-width: 1199px) {
-    display: none;
+  display: none;
+  @include for-size(desktop) {
+    display: block;
   }
 }
 

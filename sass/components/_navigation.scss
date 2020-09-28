@@ -1,7 +1,7 @@
 .navigation {
   @extend %nomargin;
 
-  @media screen and(max-width: 767px) {
+  @include for-size(mobile-tablet) {
     display: none;
     width: 100%;
     position: absolute;
@@ -14,13 +14,13 @@
     background-color: $bgd-menu;
     z-index: 1;
   }
-  @media screen and(min-width: 768px) {
+  @include for-size(tablet) {
     @include flexbox(center, space-between);
     flex-grow: 1;
   }
 }
 .navigation.is-open {
-  @media screen and(max-width: 767px) {
+  @include for-size(mobile-tablet) {
     display: block;
   }
 }
@@ -50,8 +50,7 @@
     border-radius: 2px;
     background-color: $color-accent;
   }
-
-  @media screen and(max-width: 767px) {
+  @include for-size(mobile-tablet) {
     width: 100%;
     margin-bottom: 60px;
 
@@ -68,7 +67,7 @@
     }
   }
 
-  @media screen and(min-width: 768px) {
+  @include for-size(tablet) {
     @include flexbox(center);
     @include typography(500, 14px, 1.14, 0.02em);
 
@@ -81,9 +80,8 @@
       top: 31px;
     }
   }
-  @media screen and(min-width: 768px) and(max-width:1199px) {
-  }
-  @media screen and(min-width: 1200px) {
+
+  @include for-size(desktop) {
     margin-right: 305px;
   }
 }

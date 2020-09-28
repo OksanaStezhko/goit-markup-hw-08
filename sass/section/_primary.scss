@@ -3,11 +3,13 @@
 
   &__box {
     display: inline-block;
+    max-width: 360px;
   }
 
   &__title {
     @extend %nomargin;
     margin-bottom: 30px;
+    @include typography(900, 26px, 1.61, 0.06em);
     color: $text-on-dark;
     text-transform: uppercase;
   }
@@ -24,16 +26,7 @@
     background-color: $bgd-hover;
   }
 
-  @media screen and(max-width: 1199px) {
-    &__title {
-      @include typography(900, 26px, 1.61, 0.06em);
-    }
-    &__box {
-      max-width: 360px;
-    }
-  }
-
-  @media screen and(min-width: 1200px) {
+  @include for-size(desktop) {
     &__title {
       @include typography(900, 44px, 1.36, 0.06em);
     }
@@ -51,7 +44,7 @@
   background-image: linear-gradient(to right, $bgd-primary, $bgd-primary),
     url('../images/primary.jpg');
 
-  @media screen and(min-width: 1200px) {
+  @include for-size(desktop) {
     height: 600px;
   }
 }

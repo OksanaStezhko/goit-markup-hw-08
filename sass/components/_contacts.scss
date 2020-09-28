@@ -3,19 +3,21 @@
 .contacts {
   @extend %list;
 
+  &__item {
+    display: block;
+  }
+  &__item:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
   &__link {
     @extend %nomargin;
     @extend %link;
 
+    @include typography(500, 18px, 1.16, 0.02em);
     color: $text-main;
     transition: background-color $time $time-function,
       color $time $time-function;
-  }
-
-  &__icon {
-    margin-right: 10px;
-    fill: $text-main;
-    transition: fill $time $time-function;
   }
 
   &__link:hover &__icon,
@@ -28,30 +30,23 @@
     color: $color-accent;
   }
 
-  @media screen and(max-width: 767px) {
-    &__item {
-      display: block;
-    }
-    &__item:not(:last-child) {
-      margin-bottom: 16px;
-    }
-
-    &__link {
-      @include typography(500, 18px, 1.16, 0.02em);
-    }
-
-    &__icon--envelope {
-      width: 16px;
-      height: 11px;
-    }
-
-    &__icon--smartphone {
-      width: 10px;
-      height: 15px;
-    }
+  &__icon {
+    margin-right: 10px;
+    fill: $text-main;
+    transition: fill $time $time-function;
   }
 
-  @media screen and(min-width: 768px) and(max-width: 1199px) {
+  &__icon--envelope {
+    width: 16px;
+    height: 11px;
+  }
+
+  &__icon--smartphone {
+    width: 10px;
+    height: 15px;
+  }
+
+  @include for-size(desktop-only) {
     padding-top: 21px;
     padding-bottom: 21px;
     @include flexbox(flex-start, center);
@@ -80,7 +75,7 @@
     }
   }
 
-  @media screen and(min-width: 1200px) {
+  @include for-size(desktop) {
     @include flexbox(center, center);
 
     &__link {

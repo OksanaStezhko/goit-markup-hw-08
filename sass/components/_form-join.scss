@@ -5,6 +5,9 @@
     padding-bottom: 15px;
     padding-left: 16px;
 
+    width: 100%;
+    margin-bottom: 20px;
+
     @include typography(400, 16px, 1.25);
     color: rgba(255, 255, 255, 0.6);
 
@@ -15,6 +18,7 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
   }
+
   &-input::placeholder {
     color: rgba(255, 255, 255, 0.6);
   }
@@ -43,13 +47,8 @@
     background-image: url(../images/icon-send.svg);
     background-size: contain;
   }
-  @media screen and(max-width:1199px) {
-    &-input {
-      width: 100%;
-      margin-bottom: 20px;
-    }
-  }
-  @media screen and(min-width:1200px) {
+
+  @include for-size(desktop) {
     @include flexbox();
     width: 570px;
     text-align: start;

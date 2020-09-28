@@ -33,7 +33,7 @@
     margin-bottom: 60px;
   }
 }
-@media screen and(min-width:768px) {
+@include for-size(tablet) {
   .box-contacts {
     min-width: 232px;
   }
@@ -56,7 +56,7 @@
   }
 }
 
-@media screen and(min-width:1200px) {
+@include for-size(desktop) {
   .container--footer {
     @include flexbox(baseline);
   }

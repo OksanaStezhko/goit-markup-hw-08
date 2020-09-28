@@ -2,6 +2,16 @@
   @extend %list;
   cursor: pointer;
 
+  @include flexbox(center, flex-start, wrap);
+  margin-bottom: 40px;
+
+  &__item:not(:last-child) {
+    margin-right: 8px;
+  }
+  &__item {
+    margin-bottom: 8px;
+  }
+
   &__button {
     padding: 6px 22px;
     @include typography(500, 16px, 1.62);
@@ -24,30 +34,18 @@
     box-shadow: $shadow-button-filters;
   }
 
-  @media screen and(max-width: 767px) {
-    @include flexbox(center, flex-start, wrap);
-    margin-bottom: 40px;
-
-    &__item:not(:last-child) {
-      margin-right: 8px;
-    }
-    &__item {
-      margin-bottom: 8px;
-    }
-  }
-
-  @media screen and(min-width:768px) {
+  @include for-size(tablet) {
     @include flexbox(normal, center, nowrap, flex);
     &__item:not(:last-child) {
       margin-right: 8px;
     }
   }
 
-  @media screen and(min-width:768px) and (max-width: 1199px) {
+  @include for-size(desktop-only) {
     margin-bottom: 30px;
   }
 
-  @media screen and(min-width:1199px) {
+  @include for-size(desktop) {
     margin-bottom: 50px;
   }
 }

@@ -27,12 +27,12 @@
     margin-bottom: 20px;
   }
 
-  @media screen and(min-width: 768px) {
+  @include for-size(tablet) {
     &--navigation {
       margin-right: 88px;
     }
 
-    @media screen and(min-width: 1200px) {
+    @include for-size(desktop) {
       padding-top: 24px;
       padding-bottom: 25px;
     }

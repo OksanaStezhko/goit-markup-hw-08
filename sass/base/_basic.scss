@@ -4,15 +4,13 @@
   padding-left: 15px;
   padding-right: 15px;
 
-  @media screen and(mix-width:480px) {
+  @include for-size(mobile) {
     width: 480px;
   }
-
-  @media screen and (min-width: 768px) {
+  @include for-size(tablet) {
     width: 768px;
   }
-
-  @media screen and (min-width: 1200px) {
+  @include for-size(desktop) {
     width: 1200px;
   }
 }
@@ -37,3 +35,6 @@ img {
 body.modal-open {
   overflow: hidden;
 }
+// * {
+//   outline: 1px solid red;
+// }

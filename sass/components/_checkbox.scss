@@ -3,6 +3,8 @@
   @include flexbox(center, center);
   margin-bottom: 30px;
 
+  @include typography(400, 12px, 1.16);
+
   &__label {
     margin-left: 7px;
 
@@ -32,19 +34,15 @@
     border-radius: 2px;
   }
 
-  @media screen and(max-width:479px) {
+  @include for-size(mobile-only) {
     @include flexbox(flex-start, center);
   }
 
-  @media screen and(min-width:480px) {
+  @include for-size(mobile) {
     @include flexbox(center, center);
   }
 
-  @media screen and(max-width: 1199px) {
-    @include typography(400, 12px, 1.16);
-  }
-
-  @media screen and(min-width:1200px) {
+  @include for-size(desktop) {
     @include typography(400, 14px, 1.71);
     &__label {
       margin-left: 8px;

@@ -8,7 +8,7 @@
     margin-bottom: 30px;
     @include typography-title;
 
-    @media screen and(min-width:1200px) {
+    @include for-size(desktop) {
       margin-bottom: 50px;
     }
   }

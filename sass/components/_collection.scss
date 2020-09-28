@@ -18,7 +18,7 @@
     fill: $color-accent;
     border: 1px solid $color-accent;
   }
-  @media screen and(max-width:767px) {
+  @include for-size(mobile-tablet) {
     &__item {
       width: calc((100% - 30px * 1) / 2);
     }
@@ -30,7 +30,7 @@
     }
   }
 
-  @media screen and(min-width:768px) and(max-width:1199px) {
+  @include for-size(desktop-only) {
     &__item {
       width: calc((100% - 30px * 2) / 3);
     }
@@ -42,7 +42,7 @@
     }
   }
 
-  @media screen and(min-width:1200px) {
+  @include for-size(desktop) {
     &__item {
       width: calc((100% - 30px * 5) / 6);
     }

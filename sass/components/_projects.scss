@@ -61,12 +61,12 @@
     color: $text-main;
   }
 
-  @media screen and(max-width: 767px) {
+  @include for-size(mobile-tablet) {
     &__card:not(:last-child) {
       margin-bottom: 30px;
     }
   }
-  @media screen and(min-width:768px) and(max-width:1199px) {
+  @include for-size(desktop-only) {
     @include flexbox($wrap: wrap);
 
     &__card:not(:nth-child(2n)) {
@@ -82,7 +82,7 @@
     }
   }
 
-  @media screen and(min-width:1200px) {
+  @include for-size(desktop) {
     @include flexbox($wrap: wrap);
 
     &__card:not(:nth-child(3n)) {
