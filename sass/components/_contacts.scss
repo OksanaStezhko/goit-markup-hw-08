@@ -6,9 +6,6 @@
   &__item {
     display: block;
   }
-  &__item:not(:last-child) {
-    margin-bottom: 16px;
-  }
 
   &__link {
     @extend %nomargin;
@@ -45,7 +42,11 @@
     width: 10px;
     height: 15px;
   }
-
+  @include for-size(mobile-tablet) {
+    &__item:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
   @include for-size(desktop-only) {
     padding-top: 21px;
     padding-bottom: 21px;
@@ -78,12 +79,12 @@
   @include for-size(desktop) {
     @include flexbox(center, center);
 
+    &__item:first-child {
+      margin-right: 30px;
+    }
     &__link {
       @include flexbox(center, center);
       @include typography(500, 12px, 1.16, 0.02em);
-    }
-    &__item:first-child {
-      margin-right: 30px;
     }
   }
 }

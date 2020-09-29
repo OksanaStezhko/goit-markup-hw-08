@@ -4,9 +4,8 @@
     padding-top: 15px;
     padding-bottom: 15px;
     padding-left: 16px;
-
-    width: 100%;
     margin-bottom: 20px;
+    width: 100%;
 
     @include typography(400, 16px, 1.25);
     color: rgba(255, 255, 255, 0.6);
@@ -50,11 +49,13 @@
 
   @include for-size(desktop) {
     @include flexbox();
+
     width: 570px;
     text-align: start;
 
     &-input {
       margin-right: 12px;
+      margin-bottom: 0;
       width: 358px;
     }
   }

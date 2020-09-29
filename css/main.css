@@ -140,6 +140,10 @@ body.modal-open {
   overflow: hidden;
 }
 
+* {
+  outline: 1px solid red;
+}
+
 .logo {
   font-family: "Roboto", sans-serif;
   font-style: normal;
@@ -366,10 +370,6 @@ body.modal-open {
   display: block;
 }
 
-.contacts__item:not(:last-child) {
-  margin-bottom: 16px;
-}
-
 .contacts__link {
   font-family: "Roboto", sans-serif;
   font-style: normal;
@@ -406,6 +406,12 @@ body.modal-open {
 .contacts__icon--smartphone {
   width: 10px;
   height: 15px;
+}
+
+@media screen and (max-width: 767px) {
+  .contacts__item:not(:last-child) {
+    margin-bottom: 16px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -480,6 +486,9 @@ body.modal-open {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
+  .contacts__item:first-child {
+    margin-right: 30px;
+  }
   .contacts__link {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -498,9 +507,6 @@ body.modal-open {
     font-size: 12px;
     line-height: 1.16;
     letter-spacing: 0.02em;
-  }
-  .contacts__item:first-child {
-    margin-right: 30px;
   }
 }
 
@@ -1126,8 +1132,8 @@ body.modal-open {
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 16px;
-  width: 100%;
   margin-bottom: 20px;
+  width: 100%;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1211,6 +1217,7 @@ body.modal-open {
   }
   .form-join-input {
     margin-right: 12px;
+    margin-bottom: 0;
     width: 358px;
   }
 }
