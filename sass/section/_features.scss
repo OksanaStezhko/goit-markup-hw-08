@@ -43,7 +43,7 @@
     color: $text-main;
   }
 
-  @include for-size(mobile) {
+  @include for-size(mobile-tablet) {
     &__card {
       display: block;
     }
@@ -52,7 +52,7 @@
     }
   }
 
-  @include for-size(tablet) {
+  @include for-size(desktop-only) {
     @include flexbox($wrap: wrap);
     &__card {
       width: calc((100% - 30px * 1) / 2);

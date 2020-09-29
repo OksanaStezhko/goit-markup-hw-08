@@ -37,14 +37,120 @@
 }
 
 .background {
-  max-width: 1600px;
+  max-width: 480px;
+  height: 400px;
   margin: 0px auto;
   padding: 200px 0px;
 
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from($bgd-primary),
+      to($bgd-primary)
+    ),
+    url('../images/header/header-480.jpg');
+
+  background-image: -o-linear-gradient(left, $bgd-primary, $bgd-primary),
+    url('../images/header/header-480.jpg');
+
   background-image: linear-gradient(to right, $bgd-primary, $bgd-primary),
-    url('../images/primary.jpg');
+    url('../images/header/header-480.jpg');
+
+  @include for-size(mobile) {
+    max-width: 480px;
+    height: 400px;
+    background-image: url('../images/header/header-480.jpg');
+    background-size: 480px 400px;
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (-o-min-device-pixel-ratio: 2/1),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: -webkit-gradient(
+          linear,
+          left top,
+          right top,
+          from($bgd-primary),
+          to($bgd-primary)
+        ),
+        url('../images/header/header-480@2x.jpg');
+      background-image: -o-linear-gradient(left, $bgd-primary, $bgd-primary),
+        url('../images/header/header-480@2x.jpg');
+      background-image: linear-gradient(to right, $bgd-primary, $bgd-primary),
+        url('../images/header/header-480@2x.jpg');
+    }
+  }
+
+  @include for-size(tablet) {
+    max-width: 768px;
+    height: 400px;
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from($bgd-primary),
+        to($bgd-primary)
+      ),
+      url('../images/header/header-768.jpg');
+    background-image: -o-linear-gradient(left, $bgd-primary, $bgd-primary),
+      url('../images/header/header-768.jpg');
+    background-image: linear-gradient(to right, $bgd-primary, $bgd-primary),
+      url('../images/header/header-768.jpg');
+    background-size: 768px 400px;
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (-o-min-device-pixel-ratio: 2/1),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: -webkit-gradient(
+          linear,
+          left top,
+          right top,
+          from($bgd-primary),
+          to($bgd-primary)
+        ),
+        url('../images/header/header-768@2x.jpg');
+      background-image: -o-linear-gradient(left, $bgd-primary, $bgd-primary),
+        url('../images/header/header-768@2x.jpg');
+      background-image: linear-gradient(to right, $bgd-primary, $bgd-primary),
+        url('../images/header/header-768@2x.jpg');
+    }
+  }
 
   @include for-size(desktop) {
+    max-width: 1600px;
     height: 600px;
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from($bgd-primary),
+        to($bgd-primary)
+      ),
+      url('../images/header/header-1600.jpg');
+    background-image: -o-linear-gradient(left, $bgd-primary, $bgd-primary),
+      url('../images/header/header-1600.jpg');
+    background-image: linear-gradient(to right, $bgd-primary, $bgd-primary),
+      url('../images/header/header-1600.jpg');
+    background-size: 1600px 600px;
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (-o-min-device-pixel-ratio: 2/1),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: -webkit-gradient(
+          linear,
+          left top,
+          right top,
+          from($bgd-primary),
+          to($bgd-primary)
+        ),
+        url('../images/header/header-1600@2x.jpg');
+      background-image: -o-linear-gradient(left, $bgd-primary, $bgd-primary),
+        url('../images/header/header-1600@2x.jpg');
+      background-image: linear-gradient(to right, $bgd-primary, $bgd-primary),
+        url('../images/header/header-1600@2x.jpg');
+    }
   }
 }

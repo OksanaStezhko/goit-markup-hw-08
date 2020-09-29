@@ -1,9 +1,7 @@
 .members {
   @extend %list;
   text-align: center;
-  &__card:not(:last-child) {
-    margin-bottom: 30px;
-  }
+
   &__title {
     @extend %nomargin;
     padding-top: 30px;
@@ -31,9 +29,17 @@
     color: $text-main;
   }
 
+  @include for-size(mobile-tablet) {
+    &__card:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
   @include for-size(tablet) {
     @include flexbox($wrap: wrap);
+  }
 
+  @include for-size(desktop-only) {
     &__card {
       width: calc((100% - 30px * 1) / 2);
     }
@@ -52,12 +58,6 @@
     }
     &__card:not(:nth-child(4n)) {
       margin-right: 30px;
-    }
-  }
-
-  @include for-size(desktop) {
-    &__title {
-      padding-bottom: 24px;
     }
   }
 }

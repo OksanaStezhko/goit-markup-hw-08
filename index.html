@@ -165,27 +165,54 @@
           <h2 class="activity__title">Чем мы занимаемся</h2>
           <ul class="activity-list">
             <li class="activity-list__card">
-              <img
-                src="./images/ourwork-1.jpg"
-                alt="Рабочее место. Видны руки человека на клавиатуре, монитор, планшет, схема на листе бумаги А4."
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/work/work1-370.webp    1x,
+                    ./images/work/work1-370@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+
+                <img
+                  src="./images/work/work1-370.jpg"
+                  alt="Рабочее место. Видны руки человека на клавиатуре, монитор, планшет, схема на листе бумаги А4."
+                />
+              </picture>
               <p class="activity-list__label">Десктопные приложения</p>
             </li>
             <li class="activity-list__card">
-              <img
-                src="./images/ourwork-2.jpg"
-                alt="Телефон в руке человека. На экране ноутбука три дисплея мобильного телефона."
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/work/work2-370.webp    1x,
+                    ./images/work/work2-370@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+
+                <img
+                  src="./images/work/work2-370.jpg"
+                  alt="Телефон в руке человека. На экране ноутбука три дисплея мобильного телефона."
+                />
+              </picture>
               <p class="activity-list__label">Мобильные приложения</p>
             </li>
             <li class="activity-list__card">
-              <img
-                src="./images/ourwork-3.jpg"
-                alt="Экран ноутбука с цветовой палитрой в виде шестиугольника."
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/work/work3-370.webp    1x,
+                    ./images/work/work3-370@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+
+                <img
+                  src="./images/work/work3-370.jpg"
+                  alt="Экран ноутбука с цветовой палитрой в виде шестиугольника."
+                />
+              </picture>
               <p class="activity-list__label">Дизайнерские решения</p>
             </li>
           </ul>
@@ -201,55 +228,42 @@
               <picture>
                 <source
                   srcset="
-                    ./images/member1-270.webp    1x,
-                    ./images/member1-270@2x.webp 2x
+                    ./images/team/member1-270.webp    1x,
+                    ./images/team/member1-270@2x.webp 2x
                   "
                   type="image/webp"
                   media="(min-width: 1200px)"
                 />
                 <source
                   srcset="
-                    ./images/member1-354.webp    1x,
-                    ./images/member1-354@2x.webp 2x
+                    ./images/team/member1-354.webp    1x,
+                    ./images/team/member1-354@2x.webp 2x
                   "
                   type="image/webp"
                   media="(min-width: 768px)"
                 />
                 <source
                   srcset="
-                    ./images/member1-450.webp    1x,
-                    ./images/member1-450@2x.webp 2x
+                    ./images/team/member1-450.webp    1x,
+                    ./images/team/member1-450@2x.webp 2x
                   "
                   type="image/webp"
-                  media="(max-width: 767px)"
-                />
-                <source
-                  srcset="
-                    ./images/member1-270.jpg    1x,
-                    ./images/member1-270@2x.jpg 2x
-                  "
-                  type="image/jpeg"
-                  media="(min-width: 1200px)"
-                />
-                <source
-                  srcset="
-                    ./images/member1-354.jpg    1x,
-                    ./images/member1-354@2x.jpg 2x
-                  "
-                  type="image/jpeg"
-                  media="(min-width: 768px)"
-                />
-                <source
-                  srcset="
-                    ./images/m=member1-450.jpg  1x,
-                    ./images/member1-450@2x.jpg 2x
-                  "
-                  type="image/jpeg"
                   media="(max-width: 767px)"
                 />
 
-                <img srcset="./" src="./images/member1-270.jpg" alt=""Фото члена
-                команды" />
+                <img
+                  srcset="
+                    ./images/team/member1-450.jpg    450w,
+                    ./images/team/member1-450@2x.jpg 900w,
+                    ./images/team/member1-354.jpg    354w,
+                    ./images/team/member1-354@2x.jpg 708w,
+                    ./images/team/member1-270.jpg    270w,
+                    ./images/team/member1-270@2x.jpg 540w
+                  "
+                  size="(min-width: 1200px) 270px, (min-width: 768px) 354px, 100vw"
+                  src="./images/team/member1-450.jpg"
+                  alt="Фото члена команды"
+                />
               </picture>
               <div class="members__title">
                 <h3 class="members__name">Игорь Демьяненко</h3>
@@ -287,11 +301,46 @@
               </div>
             </li>
             <li class="members__card">
-              <img
-                src="./images/ourteam-2.jpg"
-                alt="Член команды"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/member2-270.webp    1x,
+                    ./images/team/member2-270@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/member2-354.webp    1x,
+                    ./images/team/member2-354@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/member2-450.webp    1x,
+                    ./images/team/member2-450@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(max-width: 767px)"
+                />
+
+                <img
+                  srcset="
+                    ./images/team/member2-450.jpg    450w,
+                    ./images/team/member2-450@2x.jpg 900w,
+                    ./images/team/member2-354.jpg    354w,
+                    ./images/team/member2-354@2x.jpg 708w,
+                    ./images/team/member2-270.jpg    270w,
+                    ./images/team/member2-270@2x.jpg 540w
+                  "
+                  size="(min-width: 1200px) 270px, (min-width: 768px) 354px, 100vw"
+                  src="./images/team/member2-450.jpg"
+                  alt="Фото члена команды"
+                />
+              </picture>
 
               <div class="members__title">
                 <h3 class="members__name">Ольга Репина</h3>
@@ -329,11 +378,46 @@
               </div>
             </li>
             <li class="members__card">
-              <img
-                src="./images/ourteam-3.jpg"
-                alt="Член команды"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/member3-270.webp    1x,
+                    ./images/team/member3-270@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/member3-354.webp    1x,
+                    ./images/team/member3-354@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/member3-450.webp    1x,
+                    ./images/team/member3-450@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(max-width: 767px)"
+                />
+
+                <img
+                  srcset="
+                    ./images/team/member3-450.jpg    450w,
+                    ./images/team/member3-450@2x.jpg 900w,
+                    ./images/team/member3-354.jpg    354w,
+                    ./images/team/member3-354@2x.jpg 708w,
+                    ./images/team/member3-270.jpg    270w,
+                    ./images/team/member3-270@2x.jpg 540w
+                  "
+                  size="(min-width: 1200px) 270px, (min-width: 768px) 354px, 100vw"
+                  src="./images/team/member3-450.jpg"
+                  alt="Фото члена команды"
+                />
+              </picture>
 
               <div class="members__title">
                 <h3 class="members__name">Николай Тарасов</h3>
@@ -372,11 +456,46 @@
               </div>
             </li>
             <li class="members__card">
-              <img
-                src="./images/ourteam-4.jpg"
-                alt="Член команды"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/member4-270.webp    1x,
+                    ./images/team/member4-270@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/member4-354.webp    1x,
+                    ./images/team/member4-354@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/member4-450.webp    1x,
+                    ./images/team/member4-450@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(max-width: 767px)"
+                />
+
+                <img
+                  srcset="
+                    ./images/team/member4-450.jpg          450w,
+                    ./images/team/member4-450@2x.jpg 900w,
+                    ./images/team/member4-354.jpg    354w,
+                    ./images/team/member4-354@2x.jpg 708w,
+                    ./images/team/member4-270.jpg    270w,
+                    ./images/team/member4-270@2x.jpg 540w
+                  "
+                  size="(min-width: 1200px) 270px, (min-width: 768px) 354px, 100vw"
+                  src="./images/team/member4-450.jpg"
+                  alt="Фото члена команды"
+                />
+              </picture>
 
               <div class="members__title">
                 <h3 class="members__name">Михаил Ермаков</h3>

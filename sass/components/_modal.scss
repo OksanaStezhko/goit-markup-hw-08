@@ -13,6 +13,11 @@
     opacity: 0;
     pointer-events: none;
   }
+  @include for-size(mobile-only) {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
   @include for-size(mobile) {
     padding-right: 15px;
     padding-left: 15px;
