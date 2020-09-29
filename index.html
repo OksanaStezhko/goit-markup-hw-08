@@ -198,11 +198,59 @@
           <h2 class="team__title">Наша команда</h2>
           <ul class="members">
             <li class="members__card">
-              <img
-                src="./images/ourteam-1.jpg"
-                alt="Фото члена команды"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/member1-270.webp    1x,
+                    ./images/member1-270@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/member1-354.webp    1x,
+                    ./images/member1-354@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/member1-450.webp    1x,
+                    ./images/member1-450@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/member1-270.jpg    1x,
+                    ./images/member1-270@2x.jpg 2x
+                  "
+                  type="image/jpeg"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/member1-354.jpg    1x,
+                    ./images/member1-354@2x.jpg 2x
+                  "
+                  type="image/jpeg"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/m=member1-450.jpg  1x,
+                    ./images/member1-450@2x.jpg 2x
+                  "
+                  type="image/jpeg"
+                  media="(max-width: 767px)"
+                />
+
+                <img srcset="./" src="./images/member1-270.jpg" alt=""Фото члена
+                команды" />
+              </picture>
               <div class="members__title">
                 <h3 class="members__name">Игорь Демьяненко</h3>
                 <p class="members__position">Product Designer</p>
