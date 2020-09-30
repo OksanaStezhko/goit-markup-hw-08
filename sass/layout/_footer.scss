@@ -5,10 +5,12 @@
   background-color: $color-section;
 }
 .box-contacts {
+  margin-bottom: 60px;
   text-align: center;
 }
 
 .box-social {
+  margin-bottom: 60px;
   text-align: center;
   &__label {
     text-align: center;
@@ -23,28 +25,19 @@
   }
 }
 
-@media screen and(max-width:1199px) {
-  .box-contacts {
-    margin-bottom: 60px;
-  }
-}
-@media screen and(max-width:767px) {
-  .box-social {
-    margin-bottom: 60px;
-  }
-}
 @include for-size(tablet) {
   .box-contacts {
     min-width: 232px;
   }
 }
 
-@media screen and(min-width:768px) and(max-width:1199px) {
+@include for-size(desktop-only) {
   .container--footer {
     @include flexbox(flex-start, space-around, wrap);
   }
 
   .box-social {
+    margin-bottom: 0;
     padding-top: 5px;
     min-width: 206px;
   }
@@ -61,6 +54,7 @@
     @include flexbox(baseline);
   }
   .box-contacts {
+    margin-bottom: 0;
     margin-right: 70px;
     text-align: start;
   }

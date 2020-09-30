@@ -13,16 +13,10 @@
     opacity: 0;
     pointer-events: none;
   }
-  @include for-size(mobile-only) {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
 
-  @include for-size(mobile) {
-    padding-right: 15px;
-    padding-left: 15px;
-    padding-top: 93px;
-  }
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 93px;
 
   @include for-size(tablet) {
     padding-right: 159px;
@@ -72,17 +66,6 @@
 
   @include for-size(mobile) {
     position: relative;
-  }
-
-  @include for-size(tablet) {
-    position: relative;
-    // position: absolute;
-    // top: 50%;
-    // left: 50%;
-    // width: 450px;
-    // height: 609px;
-    // transform: translate(-50%, -45%) scale(1);
-    // transition: transform $time $time-function $time;
   }
 
   @include for-size(desktop) {
