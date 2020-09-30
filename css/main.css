@@ -563,15 +563,15 @@ body.modal-open {
   height: 400px;
   margin: 0px auto;
   padding: 118px 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/header/header-480.jpg");
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/header/header-480.jpg");
 }
 
 @media screen and (min-width: 480px) {
   .background {
-    height: 400px;
     background-image: url("../images/header/header-480.jpg");
-    background-size: 480px 400px;
   }
 }
 
@@ -584,10 +584,8 @@ body.modal-open {
 
 @media screen and (min-width: 768px) {
   .background {
-    height: 400px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/header/header-768.jpg");
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/header/header-768.jpg");
-    background-size: 768px 400px;
   }
 }
 
@@ -604,7 +602,6 @@ body.modal-open {
     height: 600px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/header/header-1600.jpg");
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/header/header-1600.jpg");
-    background-size: 1600px 600px;
   }
 }
 
