@@ -559,7 +559,7 @@ body.modal-open {
 }
 
 .background {
-  max-width: 480px;
+  max-width: 1600px;
   height: 400px;
   margin: 0px auto;
   padding: 118px 0px;
@@ -569,7 +569,6 @@ body.modal-open {
 
 @media screen and (min-width: 480px) {
   .background {
-    max-width: 480px;
     height: 400px;
     background-image: url("../images/header/header-480.jpg");
     background-size: 480px 400px;
@@ -585,7 +584,6 @@ body.modal-open {
 
 @media screen and (min-width: 768px) {
   .background {
-    max-width: 768px;
     height: 400px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/header/header-768.jpg");
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/header/header-768.jpg");
@@ -603,7 +601,6 @@ body.modal-open {
 @media screen and (min-width: 1200px) {
   .background {
     padding: 200px 0px;
-    max-width: 1600px;
     height: 600px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/header/header-1600.jpg");
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/header/header-1600.jpg");
@@ -1535,7 +1532,14 @@ body.modal-open {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .backdrop {
+    padding: 0;
+  }
+}
+
 .modal {
+  position: relative;
   padding: 40px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1594,21 +1598,15 @@ body.modal-open {
           transform: translate(-50%, -50%) scale(0);
 }
 
-@media screen and (min-width: 480px) {
-  .modal {
-    position: relative;
-  }
-}
-
 @media screen and (min-width: 1200px) {
   .modal {
     position: absolute;
-    top: 50%;
+    top: 221px;
     left: 50%;
     width: 528px;
     height: 581px;
-    -webkit-transform: translate(-50%, -45%) scale(1);
-            transform: translate(-50%, -45%) scale(1);
+    -webkit-transform: translateX(-50%) scale(1);
+            transform: translateX(-50%) scale(1);
     -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
     transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;

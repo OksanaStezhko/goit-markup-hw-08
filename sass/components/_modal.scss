@@ -13,7 +13,6 @@
     opacity: 0;
     pointer-events: none;
   }
-
   padding-right: 15px;
   padding-left: 15px;
   padding-top: 93px;
@@ -23,9 +22,14 @@
     padding-left: 159px;
     padding-top: 208px;
   }
+
+  @include for-size(desktop) {
+    padding: 0;
+  }
 }
 
 .modal {
+  position: relative;
   padding: 40px;
   background-color: $text-on-dark;
   box-shadow: $shadow-modal;
@@ -64,17 +68,14 @@
     transform: translate(-50%, -50%) scale(0);
   }
 
-  @include for-size(mobile) {
-    position: relative;
-  }
-
   @include for-size(desktop) {
     position: absolute;
-    top: 50%;
+    top: 221px;
     left: 50%;
+
     width: 528px;
     height: 581px;
-    transform: translate(-50%, -45%) scale(1);
+    transform: translateX(-50%) scale(1);
     transition: transform $time $time-function $time;
   }
 }
