@@ -33,8 +33,12 @@ img {
 }
 
 body.modal-open {
-  overflow: hidden;
+  // overflow: hidden;
 }
-// * {
-//   outline: 1px solid red;
-// }
+
+body {
+  padding-top: 60px;
+  @include for-size(tablet) {
+    padding-top: 80px;
+  }
+}

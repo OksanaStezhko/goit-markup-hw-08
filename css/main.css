@@ -136,8 +136,14 @@ img {
   overflow: hidden;
 }
 
-body.modal-open {
-  overflow: hidden;
+body {
+  padding-top: 60px;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    padding-top: 80px;
+  }
 }
 
 .logo {
@@ -185,6 +191,15 @@ body.modal-open {
     padding-top: 24px;
     padding-bottom: 25px;
   }
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: #ffffff;
 }
 
 .container--topline {
