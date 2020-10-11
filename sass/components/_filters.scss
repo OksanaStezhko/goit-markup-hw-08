@@ -41,7 +41,7 @@
     }
   }
 
-  @include for-size(desktop-only) {
+  @include for-size(tablet-desktop) {
     margin-bottom: 30px;
   }
 

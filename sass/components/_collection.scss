@@ -30,7 +30,7 @@
     }
   }
 
-  @include for-size(desktop-only) {
+  @include for-size(tablet-desktop) {
     &__item {
       width: calc((100% - 30px * 2) / 3);
     }

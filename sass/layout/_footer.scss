@@ -31,7 +31,7 @@
   }
 }
 
-@include for-size(desktop-only) {
+@include for-size(tablet-desktop) {
   .container--footer {
     @include flexbox(flex-start, space-around, wrap);
   }

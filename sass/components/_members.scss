@@ -39,7 +39,7 @@
     @include flexbox($wrap: wrap);
   }
 
-  @include for-size(desktop-only) {
+  @include for-size(tablet-desktop) {
     &__card {
       width: calc((100% - 30px * 1) / 2);
     }

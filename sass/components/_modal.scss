@@ -34,7 +34,8 @@
   background-color: $text-on-dark;
   box-shadow: $shadow-modal;
   border-radius: 4px;
-
+  max-width: 450px;
+  transition: transform $time $time-function $time;
   &__title {
     @extend %nomargin;
     margin-bottom: 12px;
@@ -67,15 +68,20 @@
   .backdrop.is-hidden & {
     transform: translate(-50%, -50%) scale(0);
   }
+  @include for-size(mobile-only) {
+    transform: scale(1);
+  }
+
+  @include for-size(mobile) {
+    position: absolute;
+    width: 450px;
+    left: 50%;
+    transform: translateX(-50%) scale(1);
+  }
 
   @include for-size(desktop) {
-    position: absolute;
     top: 221px;
-    left: 50%;
-
     width: 528px;
     height: 581px;
-    transform: translateX(-50%) scale(1);
-    transition: transform $time $time-function $time;
   }
 }
