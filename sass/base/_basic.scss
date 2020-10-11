@@ -34,6 +34,9 @@ img {
 
 body.modal-open {
   overflow: hidden;
+  @include for-size(desktop) {
+    overflow: auto;
+  }
 }
 
 body {

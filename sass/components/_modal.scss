@@ -34,7 +34,7 @@
   background-color: $text-on-dark;
   box-shadow: $shadow-modal;
   border-radius: 4px;
-  max-width: 450px;
+
   transition: transform $time $time-function $time;
   &__title {
     @extend %nomargin;
@@ -70,17 +70,18 @@
   }
   @include for-size(mobile-only) {
     transform: scale(1);
+    max-width: 450px;
   }
 
   @include for-size(mobile) {
     position: absolute;
-    max-width: 450px;
+    width: 450px;
     left: 50%;
     transform: translateX(-50%) scale(1);
   }
 
   @include for-size(desktop) {
     top: 221px;
-    max-width: 528px;
+    width: 528px;
   }
 }
