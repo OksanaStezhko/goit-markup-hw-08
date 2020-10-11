@@ -74,14 +74,13 @@
 
   @include for-size(mobile) {
     position: absolute;
-    width: 450px;
+    max-width: 450px;
     left: 50%;
     transform: translateX(-50%) scale(1);
   }
 
   @include for-size(desktop) {
     top: 221px;
-    width: 528px;
-    height: 581px;
+    max-width: 528px;
   }
 }
